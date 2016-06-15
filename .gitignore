@@ -1,0 +1,8 @@
+# Ignoring dependencies of npm and bower
+node_modules
+public/lib
+
+# Ignoring production assets
+public/dist
+dist/
+build/
