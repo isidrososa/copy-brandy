@@ -1,0 +1,10 @@
+$icon-font-path: "../../lib/bootstrap-sass/assets/fonts/bootstrap/";
+
+// Import font-awesome icons and fonts
+@import 'font-awesome';
+
+// Import custom and bootstrap variables
+@import 'variables';
+
+// Import bootstrap
+@import 'bootstrap';

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    {% block head %}
+    {% include 'partials/_header.html' %}
+    {% endblock %}
+
+    {% block metaDescription %}
+    <meta name="description" content="Copy Brandy">
+    {% endblock %}
+
+  </head>
+  <body>
+    <!-- <a href="javascript:void(0);" id="scroll" title="Ir al Inicio">Top<span></span></a> -->
+
+    <!-- Navbar -->
+    {% include '_navbar.html' %}
+    <!-- End Navbar -->
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+    <!-- End Footer -->
+
+    {% block scripts %}
+    <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    {% endblock %}
+  </body>
+</html>
