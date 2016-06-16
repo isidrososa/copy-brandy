@@ -5,14 +5,12 @@ var morgan = require('morgan'),
     swig = require('swig'),
     favicon = require('serve-favicon');
 
-
 module.exports = function(app, config) {
 
   // Middleware
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
   app.use(morgan('dev'));
-  app.use(favicon(config.rootPath + '/public/dist/img/icons/favicons/favicon.ico'));
 
   // Set engine views
   app.engine('html', consolidate.swig);
