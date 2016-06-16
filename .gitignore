@@ -1,3 +1,5 @@
+.tern-port
+
 # Ignoring dependencies of npm and bower
 node_modules
 public/lib
