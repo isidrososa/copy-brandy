@@ -1,0 +1,44 @@
+.cover {
+  margin-top: 0;
+  height: 650px;
+  background: url('/dist/img/cover-copy-brandy.jpg') no-repeat center right;
+  background-size: auto auto;
+  background-attachment: fixed;
+  color: white;
+
+  h1 {
+    font-size: 4em;
+  }
+
+  p {
+    font-size: 1.5em;
+  }
+
+  .cover-title {
+    margin-top: 80px;
+  }
+
+  .down-icon {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    a {
+      color: white;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  .btn-start {
+    margin-top: 50px;
+    i {
+      display: none;
+    }
+    &:hover {
+      i {
+        display: inherit;
+      }
+    }
+  }
+}
