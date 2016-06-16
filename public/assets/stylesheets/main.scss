@@ -8,3 +8,7 @@ $icon-font-path: "../../lib/bootstrap-sass/assets/fonts/bootstrap/";
 
 // Import bootstrap
 @import 'bootstrap';
+
+// Import components
+@import 'application/components/svgs';
+@import 'application/components/navbar';
