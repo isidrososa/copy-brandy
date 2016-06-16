@@ -1,0 +1,30 @@
+.works {
+  img {
+    width: 100%;
+    height: 450px;
+  }
+  .info-works {
+    padding-top: 170px;
+    width: 100%;
+    height: 450px;
+    background-color: $brand-success;
+  }
+
+  li {
+    margin-top: 10px;
+  }
+
+  .see-all-works {
+    margin-top: 20px;
+    h4 > a {
+      i {
+        display: none;
+      }
+      &:hover {
+        i {
+          display: inherit;
+        }
+      }
+    }
+  }
+}
