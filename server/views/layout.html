@@ -12,7 +12,9 @@
 
   </head>
   <body>
-    <!-- <a href="javascript:void(0);" id="scroll" title="Ir al Inicio">Top<span></span></a> -->
+    <a href="javascript:void(0);" id="scroll" title="Ir al Inicio">
+      <i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i>
+    </a>
 
     <!-- Navbar -->
     {% include '_navbar.html' %}
@@ -28,6 +30,7 @@
     {% block scripts %}
     <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/scrolling.min.js"></script>
     {% endblock %}
   </body>
 </html>
