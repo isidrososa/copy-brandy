@@ -1,5 +1,36 @@
 .navbar {
   margin-bottom: 0;
+  border: 0;
+  .navbar-brand {
+    font-size: 3rem;
+  }
+  .navbar-toggle {
+    padding: 0;
+    .icon-bar {
+      margin-bottom: 6px;
+      width: 36px;
+      height: 5px;
+      &:last-child {
+        margin-bottom: 6px;
+      }
+    }
+    &:hover {
+      .icon-bar {
+        background-color: $skyblue;
+      }
+    }
+  }
+  .navbar-collapse {
+    background-color: $skyblue;
+  }
+  li > a {
+    margin: 8px;
+    font-size: 20px;
+    color: white !important;
+    &:hover {
+      color: $bluemarine !important;
+    }
+  }
 }
 
 .navbar-nav li > a.follow {
@@ -24,17 +55,15 @@
   }
 
   .icon-facebook {
-    font-size: 28px;
-    color: $gray;
+    font-size: 25px;
+    color: $white;
     &:hover {
-      color: lighten($gray, 10%);
+      color: $bluemarine;
     }
   }
+
   .icon-twitter {
-    font-size: 28px;
-    color: $gray;
-    &:hover {
-      color: lighten($gray, 10%);
-    }
+    @extend .icon-facebook;
+    font-size: 27px;
   }
 }
