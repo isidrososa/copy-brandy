@@ -1,0 +1,19 @@
+footer {
+  padding: 33px 0 65px 0;
+  background: #2c3e4f;
+  margin-top: 65px;
+  color: white;
+  svg {
+    font-size: 22px;
+    color: white;
+    &:hover {
+      color: $brand-info;
+    }
+  }
+
+  .social-footer-icons {
+    li {
+      margin: 40px 40px  40px 0;
+    }
+  }
+}
