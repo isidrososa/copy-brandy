@@ -20,16 +20,21 @@
       }
     }
   }
-  .navbar-collapse {
-    background-color: $skyblue;
-  }
-  li > a {
-    margin: 8px;
-    font-size: 20px;
-    color: white !important;
-    &:hover {
-      color: $bluemarine !important;
+  @include for-screen(only-xs) {
+    .navbar-collapse {
+      background-color: $skyblue;
     }
+    li > a {
+      margin: 8px;
+      color: white !important;
+      &:hover {
+        color: $bluemarine !important;
+      }
+    }
+  }
+
+  li > a {
+    font-size: 20px;
   }
 }
 
@@ -54,11 +59,17 @@
     }
   }
 
-  .icon-facebook {
+  .icon-instagram, .icon-facebook {
     font-size: 25px;
-    color: $white;
+    margin-top: 32px;
     &:hover {
-      color: $bluemarine;
+      color: $skyblue;
+    }
+    @include for-screen(only-xs) {
+      color: $white;
+      &:hover {
+        color: $bluemarine;
+      }
     }
   }
 

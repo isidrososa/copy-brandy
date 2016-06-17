@@ -9,9 +9,14 @@ $icon-font-path: "../../lib/bootstrap-sass/assets/fonts/bootstrap/";
 // Import bootstrap
 @import 'bootstrap';
 
+// Import mixins
+@import 'application/mixins/buttons';
+@import 'application/mixins/responsive-utilities';
+
 // Import components
 @import 'application/components/body';
 @import 'application/components/svgs';
+@import 'application/components/bottons';
 @import 'application/components/navbar';
 @import 'application/components/cover';
 @import 'application/components/works';

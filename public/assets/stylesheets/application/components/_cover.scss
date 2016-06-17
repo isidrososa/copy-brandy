@@ -7,7 +7,7 @@
   color: white;
 
   h1 {
-    font-size: 4em;
+    font-size: 4.8em;
   }
 
   p {
@@ -15,23 +15,34 @@
   }
 
   .cover-title {
-    margin-top: 80px;
+    margin-top: 50px;
+    padding: 40px 0;
   }
 
   .down-icon {
     position: absolute;
-    bottom: 10px;
+    bottom: -80px;
     left: 0;
     a {
       color: white;
       &:hover {
-        color: red;
+        color: #e34e41;
       }
     }
   }
 
+  .btn {
+    border-radius: 0;
+  }
+  .form-control {
+    height: 47px;
+  }
   .btn-start {
-    margin-top: 50px;
+    margin-top: 48px;
+    a {
+      font-size: 1.2em;
+      padding: 10px;
+    }
     i {
       display: none;
     }

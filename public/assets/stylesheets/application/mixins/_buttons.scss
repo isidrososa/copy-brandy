@@ -1,0 +1,4 @@
+@mixin button-variant-transparent($color) {
+	@include button-variant($color, transparent, $color);
+  border: 2px solid $color;
+}

@@ -1,0 +1,67 @@
+@mixin for-screen($screen-type) {
+  @if $screen-type == 'only-xs' {
+    @media (max-width: #{$screen-xs-max}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'xxs' {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'only-sm' {
+    @media (min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'only-md' {
+    @media (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'only-lg' {
+    @media (min-width: #{$screen-lg-min}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'up-xs' {
+    @media (min-width: #{$screen-xs-min}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'up-sm' {
+    @media (min-width: #{$screen-sm-min}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'up-md' {
+    @media (min-width: #{$screen-md-min}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'down-sm' {
+    @media (max-width: #{$screen-sm-max}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'down-md' {
+    @media (max-width: #{$screen-md-max}) {
+      @content;
+    }
+  }
+
+  @else if $screen-type == 'down-lg' {
+    @media (max-width: #{$screen-lg-max}) {
+      @content;
+    }
+  }
+}
