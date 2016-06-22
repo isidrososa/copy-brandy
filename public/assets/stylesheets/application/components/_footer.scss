@@ -3,18 +3,35 @@ footer {
   background: #2c3e4f;
   margin-top: 65px;
   color: white;
-  height: 302px;
+  height: 300px;
   svg {
     font-size: 22px;
     color: white;
     &:hover {
-      color: $brand-info;
+      color: $skyblue;
     }
   }
 
-  .social-footer-icons {
-    li {
-      margin: 40px 40px  40px 0;
+  a {
+    color: $white;
+    &:hover {
+      color: $skyblue;
+    }
+  }
+  .base > li {
+    margin: 0 0  40px 0;
+    &:first-child {
+      margin: 0;
+    }
+    .social-icons-footer {
+      text-align: left;
+      @include for-screen(up-md) {
+        text-align: right;
+        a {
+          margin-right: 0;
+          margin-left: 20px;
+        }
+      }
     }
   }
 }

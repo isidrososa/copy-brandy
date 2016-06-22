@@ -40,15 +40,29 @@
   .btn-start {
     margin-top: 48px;
     a {
+      position: relative;
       font-size: 1.2em;
       padding: 10px;
+      span {
+        position: absolute;
+        right: 50%;
+        transform: traslateX(100px);
+        transition: all 1s ease-in-out;
+        &:hover {
+          transform: traslateX(0px);
+        }
+      }
     }
+
     i {
-      display: none;
+      transform: traslateX(16px) scale(0, 0);
+      opacity: 0;
+      transition: all 4s ease-in-out;
     }
     &:hover {
       i {
-        display: inherit;
+        transform: traslateX(0px) scale(1,1);
+        opacity: 1;
       }
     }
   }
