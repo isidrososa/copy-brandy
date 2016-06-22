@@ -7,8 +7,10 @@
   }
   .flex-item {
     position: relative;
-    margin-bottom: 30px;
-    &:first-child {
+
+    &:first-child,
+    &:nth-child(2) {
+      margin-bottom: 30px;
       @include for-screen(only-xs) {
         width: 100%;
       }
@@ -18,36 +20,31 @@
       }
       @include for-screen(only-lg) {
         width: 25%;
+        margin-bottom: 0;
+        padding-right: 22.5px;
       }
+    }
+
+    &:first-child {
       .my-panel-footer {
         transform: translateY(-35px);
       }
     }
 
     &:nth-child(2) {
-      @include for-screen(only-xs) {
-        width: 100%;
-      }
       @include for-screen(up-sm) {
-        width: 50%;
+        padding-right: 0px;
         padding-left: 15px;
-        .my-panel-footer {
-          padding-left: 15px;
-        }
       }
       @include for-screen(only-lg) {
-        width: 25%;
         padding-right: 15px;
+        padding-left: 7.5px;
       }
     }
 
     &:last-child {
-      @include for-screen(only-xs) {
-        width: 100%;
-      }
-      @include for-screen(up-sm) {
-        width: 100%;
-      }
+      margin-bottom: 0;
+      width: 100%;
       @include for-screen(only-lg) {
         width: 50%;
         padding-left: 15px;
@@ -88,6 +85,7 @@
     a {
       color: $red;
     }
+
   }
 
   .panel-instagram {
