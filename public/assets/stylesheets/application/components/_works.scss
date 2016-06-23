@@ -53,14 +53,7 @@
     margin: 20px 0;
     h4 > a {
       color: $bluemarine;
-      i {
-        display: none;
-      }
-      &:hover {
-        i {
-          display: inherit;
-        }
-      }
+      @extend .my-btn-slide;
     }
   }
 }

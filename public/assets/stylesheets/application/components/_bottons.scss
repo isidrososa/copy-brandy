@@ -1,3 +1,16 @@
 .my-btn-default {
   @include button-variant-transparent($white);
 }
+
+.my-btn-slide {
+  font-size: 1.2em;
+  padding: 10px;
+  .arrow-btn {
+    display: none;
+  }
+  &:hover {
+    .arrow-btn {
+      display: initial;
+    }
+  }
+}
