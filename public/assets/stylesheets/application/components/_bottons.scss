@@ -5,12 +5,24 @@
 .my-btn-slide {
   font-size: 1.2em;
   padding: 10px;
+  .helper-btn {
+    width: 19px;
+    height: 100%;
+    display:block;
+    float:left;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+  }
   .arrow-btn {
-    display: none;
+    opacity: 0;
+    transition: all .3s ease-in-out;
   }
   &:hover {
     .arrow-btn {
-      display: initial;
+      opacity: 1;
+    }
+    .helper-btn {
+      width: 6px;
     }
   }
 }
