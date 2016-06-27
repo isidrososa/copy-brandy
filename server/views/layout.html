@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
 
     {% block head %}
@@ -12,24 +12,28 @@
 
   </head>
   <body>
-    <a href="javascript:void(0);" id="scroll" title="Ir al Inicio">
-      <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
-    </a>
+
+    <main>
+      <a href="javascript:void(0);" id="scroll" title="Ir al Inicio">
+        <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
+      </a>
+
+      {% block content %}
+      {% endblock %}
+
+      <!-- Footer -->
+      {% include 'partials/_footer.html' %}
+      <!-- End Footer -->
+    </main>
 
     <!-- Navbar -->
     {% include '_navbar.html' %}
     <!-- End Navbar -->
 
-    {% block content %}
-    {% endblock %}
-
-    <!-- Footer -->
-    {% include 'partials/_footer.html' %}
-    <!-- End Footer -->
-
     {% block scripts %}
     <script type="text/javascript" src="jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="dist/js/menu.min.js"></script>
     <script type="text/javascript" src="dist/js/scrolling.min.js"></script>
     {% endblock %}
   </body>

@@ -1,13 +1,217 @@
+*, *::after, *::before {
+	             box-sizing: border-box;
+             }
+
+body, html {
+	/* prevent horizontal scrolling */
+	overflow-x: hidden;
+}
+
 #scroll {
-  z-index: 999999;
-  position: fixed;
-  right: 0;
-  bottom: 302px;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
-  background-color: $bluemarine;
-  color: white;
-  text-align: center;
-  padding: 11px 0;
+    z-index: 999999;
+    position: fixed;
+    right: 0;
+    bottom: 302px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: $bluemarine;
+    color: white;
+    text-align: center;
+    padding: 11px 0;
+  }
+
+
+main {
+
+  
+
+  position: relative;
+	z-index: 2;
+	height: 100vh;
+	overflow-y: auto;
+  background-color: $white;
+
+	-webkit-overflow-scrolling: touch;
+
+	/* Force Hardware Acceleration in WebKit */
+	transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	transition: transform $animation-duration;
+	transition-timing-function: cubic-bezier(.91,.01,.6,.99);
+
+	.navigation-is-open & {
+		transform: translateX(100%);
+	}
+}
+
+.cd-nav-trigger {
+	position: fixed;
+	z-index: 3;
+	left: 5%;
+	top: 20px;
+	height: 54px;
+	width: 54px;
+	background-color: $bluemarine;
+	border-radius: 50%;
+
+	/* image replacement */
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+
+	transition: transform $animation-duration - 0.2s;
+
+	.cd-nav-icon {
+		/* icon created in CSS */
+		position: absolute;
+		@include center; // mixin inside partials > _mixins.scss
+		width: 22px;
+		height: 2px;
+		background-color: $white;
+
+		&::before, &:after {
+			           /* upper and lower lines of the menu icon */
+			           content: '';
+			           position: absolute;
+			           top: 0;
+			           right: 0;
+			           width: 100%;
+			           height: 100%;
+			           background-color: inherit;
+
+			           /* Force Hardware Acceleration in WebKit */
+			           transform: translateZ(0);
+			           -webkit-backface-visibility: hidden;
+			           backface-visibility: hidden;
+
+			           transition: transform $animation-duration - 0.2s, width $animation-duration - 0.2s, top .3s;
+		           }
+
+		&::before {
+			transform-origin: right top;
+			transform: translateY(-6px);
+		}
+
+		&::after {
+			transform-origin: right bottom;
+			transform: translateY(6px);
+		}
+	}
+
+	.no-touch &:hover .cd-nav-icon::after {
+		top: 2px;
+	}
+
+	.no-touch &:hover .cd-nav-icon::before {
+		top: -2px;
+	}
+
+	svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	circle {
+		/* circle border animation */
+		transition: stroke-dashoffset $animation-duration - 0.3s 0s;
+	}
+
+	.navigation-is-open & {
+		/* rotate trigger when navigation becomes visible */
+		transform: rotate(180deg);
+
+		.cd-nav-icon::after,
+		.cd-nav-icon::before {
+			/* animate arrow --> from hamburger to arrow */
+			width: 50%;
+			transition: transform $animation-duration - 0.2s, width $animation-duration - 0.2s;
+		}
+
+		.cd-nav-icon::before {
+			transform: rotate(45deg);
+		}
+
+		.cd-nav-icon::after {
+			transform: rotate(-45deg);
+		}
+
+		.no-touch &:hover .cd-nav-icon::after,
+		.no-touch &:hover .cd-nav-icon::before {
+			top: 0;
+		}
+
+		circle {
+			stroke-dashoffset: 0;
+			transition: stroke-dashoffset $animation-duration - 0.3s 0.3s;
+		}
+	}
+}
+
+.cd-nav {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $skyblue;
+	visibility: hidden;
+	transition: visibility 0s $animation-duration;
+
+	.cd-navigation-wrapper {
+		/* all navigation content */
+		height: 100%;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		padding: 40px 5% 40px calc(5% + 80px);
+
+		/* Force Hardware Acceleration in WebKit */
+		transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+		transform: translateX(-50%);
+		transition: transform $animation-duration;
+		transition-timing-function: cubic-bezier(.86,.01,.77,.78);
+	}
+
+	.navigation-is-open & {
+		visibility: visible;
+		transition: visibility 0s 0s;
+
+		.cd-navigation-wrapper {
+			transform: translateX(0);
+			transition: transform $animation-duration - 0.2s;
+			transition: timing-function (cubic-bezier(.82,.01,.77,.78));
+		}
+	}
+
+	.cd-primary-nav {
+		margin-top: 60px;
+	}
+
+	.cd-contact-info {
+		margin-top: 80px;
+	}
+}
+
+.no-js > main {
+	height: auto;
+	overflow: visible;
+}
+
+.no-js > .cd-nav {
+	position: static;
+	visibility: visible;
+
+	.cd-navigation-wrapper {
+		height: auto;
+		overflow: visible;
+		padding: 100px 5%;
+		transform: translateX(0);
+	}
 }
