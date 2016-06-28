@@ -1,53 +1,3 @@
-#navbar {
-  margin-bottom: 0;
-  border: 0;
-  .navbar-brand {
-    font-size: 3rem;
-  }
-  .navbar-toggle {
-    padding: 0;
-    .icon-bar {
-      margin-bottom: 6px;
-      width: 36px;
-      height: 5px;
-      &:last-child {
-        margin-bottom: 6px;
-      }
-    }
-    &:hover {
-      .icon-bar {
-        background-color: $skyblue;
-      }
-    }
-  }
-  @include for-screen(only-xs) {
-    .navbar-collapse {
-      background-color: $skyblue;
-    }
-    li > a {
-      margin: 8px;
-      color: white !important;
-      &:hover {
-        color: $bluemarine !important;
-      }
-    }
-  }
-
-  li > a {
-    font-size: 20px;
-  }
-}
-
-.navbar-nav li > a.follow {
-  display: none;
-  text-decoration: none;
-  color: $gray;
-  font-size: 12px;
-  &:hover {
-    color: $gray;
-  }
-}
-
 .social-nav {
   text-align: center;
   padding: 0;
@@ -62,14 +12,9 @@
   .icon-instagram, .icon-facebook {
     font-size: 25px;
     margin-top: 32px;
+    color: $white;
     &:hover {
-      color: $skyblue;
-    }
-    @include for-screen(only-xs) {
-      color: $white;
-      &:hover {
-        color: $bluemarine;
-      }
+      color: $bluemarine;
     }
   }
 
@@ -82,9 +27,13 @@
 .cd-nav-trigger {
   transition: transform 0.5s;
   .cd-nav-icon {
-    background-color: $white;
+    background-color: $bluemarine;
   }
+
   &:hover {
+    .cd-nav-icon {
+      background-color: $skyblue;
+    }
     .cd-nav-icon::before {
       transform: translateY(-12px);
     }
@@ -96,6 +45,12 @@
 .navigation-is-open .cd-nav-trigger {
   /* rotate trigger when navigation becomes visible */
   transform: rotate(180deg);
+  background-color: transparent;
+  &:hover {
+    .cd-nav-icon {
+      background-color: $bluemarine;
+    }
+  }
 }
 .cd-nav-trigger .cd-nav-icon::before,
 .cd-nav-trigger .cd-nav-icon:after {
