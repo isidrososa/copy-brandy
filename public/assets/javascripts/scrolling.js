@@ -16,7 +16,7 @@ $(function() {
 // Scroll Top button
 $(document).ready(function() {
   // FadeIn or FadeOut scroll button
-  $(window).scroll(function() {
+  $('main').scroll(function() {
     if ($(this).scrollTop() > 400) {
       $('#scroll').fadeIn();
     } else {
