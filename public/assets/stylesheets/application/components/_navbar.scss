@@ -82,7 +82,15 @@
 .cd-nav-trigger {
   transition: transform 0.5s;
   .cd-nav-icon {
-    background-color: $white;    
+    background-color: $white;
+  }
+  &:hover {
+    .cd-nav-icon::before {
+      transform: translateY(-12px);
+    }
+    .cd-nav-icon::after {
+      transform: translateY(12px);
+    }
   }
 }
 .navigation-is-open .cd-nav-trigger {
@@ -98,11 +106,11 @@
 }
 .cd-nav-trigger .cd-nav-icon::before {
   transform-origin: right top;
-  transform: translateY(-6px);
+  transform: translateY(-10px);
 }
 .cd-nav-trigger .cd-nav-icon::after {
   transform-origin: right bottom;
-  transform: translateY(6px);
+  transform: translateY(10px);
 }
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::after,
 .navigation-is-open .cd-nav-trigger .cd-nav-icon::before {

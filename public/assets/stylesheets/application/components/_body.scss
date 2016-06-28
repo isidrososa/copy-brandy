@@ -8,24 +8,24 @@ body, html {
 }
 
 #scroll {
-    z-index: 999999;
-    position: fixed;
-    right: 0;
-    bottom: 302px;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: $bluemarine;
-    color: white;
-    text-align: center;
-    padding: 11px 0;
-  }
+  z-index: 999999;
+  position: fixed;
+  right: 0;
+  bottom: 302px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: $bluemarine;
+  color: white;
+  text-align: center;
+  padding: 11px 0;
+}
 
+.show-btn {
+  opacity: 0;
+}
 
 main {
-
-  
-
   position: relative;
 	z-index: 2;
 	height: 100vh;
@@ -50,12 +50,13 @@ main {
 .cd-nav-trigger {
 	position: fixed;
 	z-index: 3;
-	left: 5%;
-	top: 20px;
-	height: 54px;
-	width: 54px;
-	background-color: $bluemarine;
+	right: 5%;
+	top: 30px;
+	height: 60px;
+	width: 60px;
+	background-color: rgba($skyblue, .1);
 	border-radius: 50%;
+  padding: 14px;
 
 	/* image replacement */
 	overflow: hidden;
@@ -68,8 +69,8 @@ main {
 		/* icon created in CSS */
 		position: absolute;
 		@include center; // mixin inside partials > _mixins.scss
-		width: 22px;
-		height: 2px;
+		width: 30px;
+		height: 3px;
 		background-color: $white;
 
 		&::before, &:after {
@@ -92,12 +93,12 @@ main {
 
 		&::before {
 			transform-origin: right top;
-			transform: translateY(-6px);
+			transform: translateY(-12px);
 		}
 
 		&::after {
 			transform-origin: right bottom;
-			transform: translateY(6px);
+			transform: translateY(12px);
 		}
 	}
 
