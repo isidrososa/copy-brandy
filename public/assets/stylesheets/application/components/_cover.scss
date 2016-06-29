@@ -3,6 +3,10 @@
   padding-top: 20px;
   height: 120px;
   color: $bluemarine;
+  @include for-screen(only-xs){
+    height: 80px;
+    padding-top: 0;
+  }
 }
 
 .cover {

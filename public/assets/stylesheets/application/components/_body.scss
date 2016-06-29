@@ -60,6 +60,10 @@ main {
 	border-radius: 50%;
   padding: 14px;
 
+  @include for-screen(only-xs) {
+    top: 10px;
+  }
+
 	/* image replacement */
 	overflow: hidden;
 	text-indent: 100%;
@@ -183,6 +187,9 @@ main {
     a {
       h1 {
         margin: 40px 5%;
+        @include for-screen(only-xs) {
+          margin: 20px 5%;
+        }
         color: rgba($bluemarine, .1);
       }
       &:hover {
