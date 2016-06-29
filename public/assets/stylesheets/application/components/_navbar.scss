@@ -3,14 +3,14 @@
   padding: 0;
   li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 32px;
     &:last-child {
       margin-right: 0;
     }
   }
 
   .icon-instagram, .icon-facebook {
-    font-size: 25px;
+    font-size: 30px;
     margin-top: 32px;
     color: $white;
     &:hover {
@@ -20,7 +20,7 @@
 
   .icon-twitter {
     @extend .icon-facebook;
-    font-size: 27px;
+    font-size: 32px;
   }
 }
 
