@@ -199,6 +199,7 @@ main {
         margin: 40px 5%;
         @include for-screen(only-xs) {
           margin: 20px 5%;
+
         }
         color: rgba($white, .2);
       }
@@ -219,6 +220,7 @@ main {
           color: $bluemarine;
         }
         @include for-screen('only-xs') {
+          font-size: 1.8em;
           margin-top: 0;
           &:hover {
             background-color: rgba($bluemarine, .1);
@@ -227,10 +229,12 @@ main {
       }
     }
     .navbar-social {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      bottom: 20px;
+      @include for-screen('up-xs') {
+        margin-top: 30%;
+      }
+      @include for-screen('only-xs') {
+        margin-top: 30px;
+      }
     }
 	}
 

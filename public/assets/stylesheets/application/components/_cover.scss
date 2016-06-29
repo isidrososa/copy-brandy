@@ -41,6 +41,22 @@
     padding: 40px 0;
   }
 
+  @include for-screen(xxs) {
+    h1 {
+      font-size: 2em;
+    }
+
+    p {
+      font-size: 1em;
+    }
+
+    .cover-title {
+      margin-top: 10px;
+      padding: 10px 0;
+    }
+  }
+
+
   .down-icon {
     position: absolute;
     bottom: 10px;
@@ -62,7 +78,11 @@
   }
 
   .btn-start {
+    @include for-screen('only-xs') {
+      margin-top: 20px;
+    }
     margin-top: 48px;
+
     a {
       @extend .my-btn-slide;
     }
