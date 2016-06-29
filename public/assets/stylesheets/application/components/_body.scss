@@ -158,6 +158,16 @@ main {
 	}
 }
 
+.layer {
+  z-index:0;
+  background: url('/dist/img/cover-copy-brandy.jpg') no-repeat center left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .cd-nav {
 	position: fixed;
 	z-index: 1;
@@ -165,7 +175,7 @@ main {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background-color: $skyblue;
+  background-color: rgba($skyblue, 0.8);
 	visibility: hidden;
 	transition: visibility 0s $animation-duration;
 
@@ -190,7 +200,7 @@ main {
         @include for-screen(only-xs) {
           margin: 20px 5%;
         }
-        color: rgba($bluemarine, .1);
+        color: rgba($white, .2);
       }
       &:hover {
         color: $bluemarine;
