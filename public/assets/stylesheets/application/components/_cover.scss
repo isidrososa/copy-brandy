@@ -22,6 +22,16 @@
     font-size: 1.5em;
   }
 
+  @include for-screen(only-xs) {
+    h1 {
+      font-size: 3.8em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+
   .cover-title {
     margin-top: 50px;
     padding: 40px 0;
