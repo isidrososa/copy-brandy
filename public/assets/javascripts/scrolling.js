@@ -12,21 +12,3 @@ $(function() {
     }
   });
 });
-
-// Scroll Top button
-$(document).ready(function() {
-  // FadeIn or FadeOut scroll button
-  $('main').scroll(function() {
-    if ($(this).scrollTop() > 400) {
-      $('#scroll').fadeIn();
-    } else {
-      $('#scroll').fadeOut();
-    }
-  });
-
-  // Add scroll event
-  $('#scroll').click(function() {
-    $('main').animate({ scrollTop: 0 }, 1000);
-    return false;
-  });
-});
