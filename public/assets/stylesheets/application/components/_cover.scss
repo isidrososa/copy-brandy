@@ -12,7 +12,7 @@
 .cover {
   position: relative;
   margin-top: 0;
-  height: 100%;
+  height: 80%;
   background: url('/dist/img/cover-copy-brandy.jpg') no-repeat center right;
   background-size: auto auto;
   background-attachment: fixed;
@@ -26,7 +26,13 @@
     font-size: 1.5em;
   }
 
+  @include for-screen(only-sm) {
+    height: 600px;
+  }
+
   @include for-screen(only-xs) {
+    height: 550px;
+
     h1 {
       font-size: 3.8em;
     }
@@ -42,6 +48,7 @@
   }
 
   @include for-screen(xxs) {
+    height: 400px;
     h1 {
       font-size: 2em;
     }
