@@ -30,6 +30,10 @@
     background-color: $bluemarine;
   }
 
+  circle {
+    stroke: $skyblue;
+  }
+
   &:hover {
     .cd-nav-icon {
       background-color: $skyblue;
@@ -46,9 +50,18 @@
   /* rotate trigger when navigation becomes visible */
   transform: rotate(180deg);
   background-color: transparent;
+
+  .cd-nav-icon {
+    background-color: $skyblue;
+  }
+
+  circle {
+    stroke: rgba($skyblue, 0.5);
+  }
+
   &:hover {
     .cd-nav-icon {
-      background-color: $bluemarine;
+      background-color: $skyblue;
     }
   }
 }

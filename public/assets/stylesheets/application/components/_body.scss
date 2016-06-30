@@ -77,7 +77,7 @@ main {
 		@include center; // mixin inside partials > _mixins.scss
 		width: 30px;
 		height: 3px;
-		background-color: $bluemarine;
+		background-color: $skyblue;
 
 		&::before, &:after {
 			           /* upper and lower lines of the menu icon */
@@ -130,6 +130,10 @@ main {
 	.navigation-is-open & {
 		/* rotate trigger when navigation becomes visible */
 		transform: rotate(180deg);
+    .cd-nav-icon {
+      width: 25px;
+      height: 2px;
+    }
 
 		.cd-nav-icon::after,
 		.cd-nav-icon::before {
