@@ -47,16 +47,16 @@
   background-color: transparent;
 
   .cd-nav-icon {
-    background-color: $skyblue;
+    background-color: $bluemarine;
   }
 
   circle {
-    stroke: rgba($skyblue, 0.5);
+    stroke: $bluemarine;
   }
 
   &:hover {
     .cd-nav-icon {
-      background-color: $skyblue;
+      background-color: $bluemarine;
     }
   }
 }

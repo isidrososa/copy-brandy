@@ -15,6 +15,14 @@ jQuery(document).ready(function($){
     }
   });
 
+  $('main').scroll(function() {
+    if ($(this).scrollTop() < 30 || $(this).scrollTop() > 500) {
+      $('.cd-nav-trigger').fadeIn();
+    } else {
+      $('.cd-nav-trigger').fadeOut();
+    }
+  });
+
 	//open/close lateral navigation
 	$('.cd-nav-trigger').on('click', function(event){
 		event.preventDefault();
@@ -24,15 +32,14 @@ jQuery(document).ready(function($){
 
       if(showMenu) {
 			  $('body').removeClass('navigation-is-open');
-        $('#scroll').fadeIn();
         showMenu = false;
       } else {
         $('body').addClass('navigation-is-open');
-        $('#scroll').fadeOut();
         setTimeout(function() {
           $('main').scrollTop(0);
         }, 700);
         showMenu = true;
+
       }
 
       $('.cd-navigation-wrapper').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
